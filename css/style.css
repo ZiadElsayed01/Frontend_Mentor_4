@@ -1,0 +1,141 @@
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--Light-grayish-blue);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.container {
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 25px;
+  grid-template-areas: 'a a b e' 'c d d e';
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+div > p {
+  color: hsla(0, 0%, 81%,0.7);
+  margin-top: 15px;
+}
+div > h2 {
+  margin-top: 15px;
+}
+span {
+  color: hsla(0, 0%, 81%,0.5);
+}
+.box {
+  padding: 15px;
+  border-radius: 14px;
+  padding: 20px;
+}
+.box1 .info .text h1 ,
+.box2 .info .text h1 ,
+.box5 .info .text h1 {
+  font-size: 1em;
+  color: var(--White);
+}
+.box3 .info .text h1 ,
+.box4 .info .text h1 {
+  font-size: 1em;
+  color: var(--Very-dark-grayish-blue);
+}
+.box3 span ,
+.box4 span {
+  color: hsl(219, 29%, 14%,0.5);
+}
+.box1 h2 ,
+.box2 h2 ,
+.box5 h2 {
+  color: var(--White);
+  font-size: 1.3em;
+}
+.box3 h2 ,
+.box4 h2 {
+  color: var(--Very-dark-grayish-blue);
+}
+.box3 p ,
+.box4 p {
+  color: hsl(219, 29%, 14%,0.7);
+}
+.box1 {
+  grid-area: a;
+  background-color: var(--Moderate-violet);
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80%  6%;
+  max-width: 600px;
+  position: relative;
+}
+.box2 {
+  grid-area: b;
+  background-color: var(--Very-dark-grayish-blue);
+  max-width: 260px;
+}
+.box3 {
+  grid-area: e;
+  max-width: 260px;
+  background-color: var(--White);
+}
+.box4 {
+  grid-area: c;
+  max-width: 260px;
+  background-color: var(--White);
+}
+.box5 {
+  grid-area: d;
+  background-color: var(--Very-dark-blackish-blue);
+  max-width: 600px;
+}
+.info {
+  display: flex;
+}
+img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.text {
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .box {
+    max-width: 400px;
+  }
+  .box3 {
+    order: 5;
+  }
+}
